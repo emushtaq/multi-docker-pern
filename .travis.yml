@@ -4,16 +4,16 @@ services:
   - docker
 
 before_install:
-  - docker build -t emushtaq/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t eshmeister/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true emushtaq/react-test npm test
+  - docker run -e CI=true eshmeister/react-test npm test
 
 after_success:
-  - docker build -t emushtaq/multi-docker-client ./client
-  - docker build -t emushtaq/multi-docker-nginx ./nginx
-  - docker build -t emushtaq/multi-docker-server ./server
-  - docker build -t emushtaq/multi-docker-worker ./worker
+  - docker build -t eshmeister/multi-docker-client ./client
+  - docker build -t eshmeister/multi-docker-nginx ./nginx
+  - docker build -t eshmeister/multi-docker-server ./server
+  - docker build -t eshmeister/multi-docker-worker ./worker
 
   # Login to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
