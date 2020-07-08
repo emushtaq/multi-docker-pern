@@ -19,8 +19,8 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Take the images and push to dockerhub
-  - docker push emushtaq/multi-docker-client
-  - docker push emushtaq/multi-docker-nginx
-  - docker push emushtaq/multi-docker-server
-  - docker push emushtaq/multi-docker-worker
+  - docker push eshmeister/multi-docker-client
+  - docker push eshmeister/multi-docker-nginx
+  - docker push eshmeister/multi-docker-server
+  - docker push eshmeister/multi-docker-worker
 
