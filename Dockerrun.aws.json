@@ -4,23 +4,27 @@
         {
             "name": "client",
             "image": "eshmeister/multi-docker-client",
+            "memory": 128,
             "hostname": "client",
             "essential": false
         },
         {
             "name": "server",
             "image": "eshmeister/multi-docker-server",
+            "memory": 128,
             "hostname": "api",
             "essential": false        },
         {
             "name": "worker",
             "image": "eshmeister/multi-docker-worker",
+            "memory": 128,
             "hostname": "worker",
             "essential": false
         },
         {
             "name": "nginx",
             "image": "eshmeister/multi-docker-nginx",
+            "memory": 128,
             "hostname": "nginx",
             "essential": true,
             "portMappings": [
